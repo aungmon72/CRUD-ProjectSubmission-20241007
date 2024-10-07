@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table, th, td {
+            border:2px solid black;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            text-align: left;
+            padding: 16px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Todo List</h1>
+        <h6>Developed by Aung Mon</h6>
+        <h1><p></p><p></p>
+        </h1>
+    </div>
+
+    <div class="mb-3">
+        <input type="text" id="taskName" class="form-control" placeholder="Task Name">
+    </div>
+    <div class="mb-3">
+            <select id="taskUrgency" class="form-control">
+                <option value="1">Low Low     1</option>
+                <option value="2">Low         2</option>
+                <option value="3">Medium      3</option>
+                <option value="4">High        4</option>
+                <option value="5">High High   5</option>
+            </select>
+    </div>
+    <div class="mb-3">
+        <input type="text" id="taskCalories" class="form-control" placeholder="Task Calories">
+    </div>
+    <div class="mb-3">
+        <h6>Summing the Calories</h6>
+        <input type="radio" name="taskSumming" id="taskSumming" value="true">
+        <label for="taskSumming">"true"</label><br>
+        <input type="radio" name="taskSumming" id="taskSumming" value="false">
+        <label for="taskSumming">"false"</label><br>
+
+    </div>
+    <button id="addTodo" class="btn btn-primary mb-3">Add Todo</button>
+
+    <button id="calculateMinMaxSumming" class="btn btn-primary mb-3">
+        Calculate Minimum, Maximum & Summing of Calories
+    </button>
+
+    <div id="calories-summing">
+        <p id="showMinimum">
+        </p>
+        <p id="showMaximum">
+        </p>
+        <p id="showSumming">
+        </p>
+    </div>
+    
+    <div class="container">
+        <h1>Todo List</h1>
+        <h2>
+            <button type="button" id="deleteFileButton" class="btn add-btn btn-success btn-sm" >
+                Delete File
+            </button>
+            <!-- <button type="button" id="addButton" class="btn add-btn btn-success btn-sm">
+                Add Record
+            </button> -->
+        </h2>
+        <ul id="todoList" class="list-group">
+        <!-- Todo items will be appended here -->
+        </ul>
+       
+    </div>
+    <p></p>
+    <p></p>
+    <div>
+        <h1>Todo list in Table</h1>
+        <h4>under development</h4>
+        <table style="width:100%" id="todoTable">
+            <!-- <tr>
+              <th>Task ID</th>  
+              <th>Task Name</th>
+              <th>Priority</th>
+              <th>Calories</th>
+              <th>Summing</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr> -->
+          </table>
+    </div>
+
+    <!-- Including data.js and script.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" 
+        integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>"></script>
+    <script src="data.js"></script>
+    <script src="axio-access.js"></script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
